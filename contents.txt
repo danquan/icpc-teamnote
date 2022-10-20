@@ -12,7 +12,7 @@ mincostflow.cc	Min Cost Flow
 
 [Numerical algorithms]
 rabinmiller.cc	Rabin Miller - Prime Checker
-rho.cc	Pollar Rho - Factorialize
+rho.cc	Pollard Rho - Factorialize
 fft.cc	FFT
 fftmod998.cc	FFT (Mod 998244353)
 countprimes.cc	Count Primes
