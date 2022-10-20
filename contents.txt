@@ -1,0 +1,36 @@
+# Any line followed by a '#' character is ignored
+# Section headings must be in square brackets
+# Subsections within a section should follow the format:
+#   [filename within code directory][tab character \t][subsection title]
+
+[Combinatorial optimization]
+dinic.cc	Maximum Flow (Dinic)
+hopcroftkarp.cc	Maximum Matching (HopCroft - Karp)
+mincostflow.cc	Min Cost Flow
+
+[Geometry]
+
+[Numerical algorithms]
+rabinmiller.cc	Rabin Miller - Prime Checker
+rho.cc	Pollar Rho - Factorialize
+fft.cc	FFT
+fftmod998.cc	FFT (Mod 998244353)
+countprimes.cc	Count Primes
+interpolation.cc	Interpolation (Mod a prime)
+bignum.cpp	Bignum
+bignummul.cc	Bignum with FFT multiplication
+
+[Graph algorithms]
+twosat.cc	Twosat (2-SAT)
+eulerian.cc	Eulerian Path
+
+
+[Data structures]
+walkonfenwick.cc	Fenwick Tree (With Walk on tree)
+cht.cc	Convex Hull Trick (Min)
+dynamiccht.cc	Dynamic Convex Hull Trick (Min)
+aho.cc	Aho Corasick - Extended KMP
+palindrometree.cc	Palindrome Tree
+sa.cc	Suffix Array
+suffixtree.cc	Suffix Tree (Template by Tran Khoi Nguyen)
+splaytree.cc	SPlay Tree
