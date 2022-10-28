@@ -43,7 +43,7 @@ struct AhoCorasick
     }
 
     // if a->to[v] == NULL
-    // for convinient a->to[v] = root
+    // for convinient a->to[v] = the node x->to[v] that a match x and x->to[v] != NULL
     // root -> suflink = root
 
     void build()

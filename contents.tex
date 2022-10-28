@@ -1,19 +1,40 @@
-\section{Combinatorial optimization}
+\section{Flow and Matching}
 \subsection{Maximum Flow (Dinic)}
 \raggedbottom\lstinputlisting[style=cpp]{code/dinic.cc}
 \hrulefill
 \subsection{Maximum Matching (HopCroft - Karp)}
 \raggedbottom\lstinputlisting[style=cpp]{code/hopcroftkarp.cc}
 \hrulefill
+\subsection{Maximum Matching (O($n^2$))}
+\raggedbottom\lstinputlisting[style=cpp]{code/maxmatch.cc}
+\hrulefill
 \subsection{Min Cost Flow}
 \raggedbottom\lstinputlisting[style=cpp]{code/mincostflow.cc}
 \hrulefill
 
 \section{Geometry}
+\subsection{Pick's Theorem}
+\raggedbottom\lstinputlisting[style=txt]{code/pick.txt}
+\hrulefill
+\subsection{Smallest Circle - Emo Welzl (Contain all points)}
+\raggedbottom\lstinputlisting[style=cpp]{code/smallestcircle.cc}
+\hrulefill
+\subsection{Closest pair of points in set}
+\raggedbottom\lstinputlisting[style=cpp]{code/closestpoint.cc}
+\hrulefill
+\subsection{Manhattan MST}
+\raggedbottom\lstinputlisting[style=cpp]{code/manhattanmst.cc}
+\hrulefill
 
 \section{Numerical algorithms}
+\subsection{SQRT For Loop}
+\raggedbottom\lstinputlisting[style=cpp]{code/calc.cc}
+\hrulefill
 \subsection{Rabin Miller - Prime Checker}
 \raggedbottom\lstinputlisting[style=cpp]{code/rabinmiller.cc}
+\hrulefill
+\subsection{Chinese Remain Theorem}
+\raggedbottom\lstinputlisting[style=cpp]{code/crt.cc}
 \hrulefill
 \subsection{Pollard Rho - Factorialize}
 \raggedbottom\lstinputlisting[style=cpp]{code/rho.cc}
@@ -31,10 +52,16 @@
 \raggedbottom\lstinputlisting[style=cpp]{code/interpolation.cc}
 \hrulefill
 \subsection{Bignum}
-\raggedbottom\lstinputlisting[style=cpp]{code/bignum.cpp}
+\raggedbottom\lstinputlisting[style=cpp]{code/bignum.cc}
 \hrulefill
 \subsection{Bignum with FFT multiplication}
 \raggedbottom\lstinputlisting[style=cpp]{code/bignummul.cc}
+\hrulefill
+\subsection{Tonelli Shanks (Find square root modulo)}
+\raggedbottom\lstinputlisting[style=cpp]{code/tonellishanks.cc}
+\hrulefill
+\subsection{Discrete Logarithm (Find $x$ that $a^x \equiv b$ $(mod$ $m)$)}
+\raggedbottom\lstinputlisting[style=cpp]{code/discretelog.cc}
 \hrulefill
 
 \section{Graph algorithms}
@@ -43,6 +70,23 @@
 \hrulefill
 \subsection{Eulerian Path}
 \raggedbottom\lstinputlisting[style=cpp]{code/eulerian.cc}
+\hrulefill
+\subsection{Biconnected Component Tree}
+\raggedbottom\lstinputlisting[style=cpp]{code/biconnected.cc}
+\hrulefill
+
+\section{String}
+\subsection{Palindrome Tree}
+\raggedbottom\lstinputlisting[style=cpp]{code/palindrometree.cc}
+\hrulefill
+\subsection{Suffix Array}
+\raggedbottom\lstinputlisting[style=cpp]{code/sa.cc}
+\hrulefill
+\subsection{Aho Corasick - Extended KMP}
+\raggedbottom\lstinputlisting[style=cpp]{code/aho.cc}
+\hrulefill
+\subsection{Suffix Tree (Template by Tran Khoi Nguyen)}
+\raggedbottom\lstinputlisting[style=cpp]{code/suffixtree.cc}
 \hrulefill
 
 \section{Data structures}
@@ -54,18 +98,6 @@
 \hrulefill
 \subsection{Dynamic Convex Hull Trick (Min)}
 \raggedbottom\lstinputlisting[style=cpp]{code/dynamiccht.cc}
-\hrulefill
-\subsection{Aho Corasick - Extended KMP}
-\raggedbottom\lstinputlisting[style=cpp]{code/aho.cc}
-\hrulefill
-\subsection{Palindrome Tree}
-\raggedbottom\lstinputlisting[style=cpp]{code/palindrometree.cc}
-\hrulefill
-\subsection{Suffix Array}
-\raggedbottom\lstinputlisting[style=cpp]{code/sa.cc}
-\hrulefill
-\subsection{Suffix Tree (Template by Tran Khoi Nguyen)}
-\raggedbottom\lstinputlisting[style=cpp]{code/suffixtree.cc}
 \hrulefill
 \subsection{SPlay Tree}
 \raggedbottom\lstinputlisting[style=cpp]{code/splaytree.cc}

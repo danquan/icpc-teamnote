@@ -3,34 +3,45 @@
 # Subsections within a section should follow the format:
 #   [filename within code directory][tab character \t][subsection title]
 
-[Combinatorial optimization]
+[Flow and Matching]
 dinic.cc	Maximum Flow (Dinic)
 hopcroftkarp.cc	Maximum Matching (HopCroft - Karp)
+maxmatch.cc	Maximum Matching (O($n^2$))
 mincostflow.cc	Min Cost Flow
 
 [Geometry]
+pick.txt	Pick's Theorem
+smallestcircle.cc	Smallest Circle - Emo Welzl (Contain all points)
+closestpoint.cc	Closest pair of points in set
+manhattanmst.cc	Manhattan MST
 
 [Numerical algorithms]
+calc.cc	SQRT For Loop
 rabinmiller.cc	Rabin Miller - Prime Checker
+crt.cc	Chinese Remain Theorem
 rho.cc	Pollard Rho - Factorialize
 fft.cc	FFT
 fftmod998.cc	FFT (Mod 998244353)
 countprimes.cc	Count Primes
 interpolation.cc	Interpolation (Mod a prime)
-bignum.cpp	Bignum
+bignum.cc	Bignum
 bignummul.cc	Bignum with FFT multiplication
+tonellishanks.cc	Tonelli Shanks (Find square root modulo)
+discretelog.cc	Discrete Logarithm (Find $x$ that $a^x \equiv b$ $(mod$ $m)$)
 
 [Graph algorithms]
 twosat.cc	Twosat (2-SAT)
 eulerian.cc	Eulerian Path
+biconnected.cc	Biconnected Component Tree
 
+[String]
+palindrometree.cc	Palindrome Tree
+sa.cc	Suffix Array
+aho.cc	Aho Corasick - Extended KMP
+suffixtree.cc	Suffix Tree (Template by Tran Khoi Nguyen)
 
 [Data structures]
 walkonfenwick.cc	Fenwick Tree (With Walk on tree)
 cht.cc	Convex Hull Trick (Min)
 dynamiccht.cc	Dynamic Convex Hull Trick (Min)
-aho.cc	Aho Corasick - Extended KMP
-palindrometree.cc	Palindrome Tree
-sa.cc	Suffix Array
-suffixtree.cc	Suffix Tree (Template by Tran Khoi Nguyen)
 splaytree.cc	SPlay Tree
