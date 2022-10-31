@@ -1,83 +1,84 @@
 // string and array pos start from 0
 // but array sa and lcp start from 1
-constexpr char firstCharacter = 'a';
-constexpr int ALPHABET_SIZE = 26;
 
+constexpr int N = 3e5 + 5; // change size to size of string;
+ 
 struct SuffixArray
 {
     string s;
-    vector<int> sa, lcp, pos;
-    int n;
-#define ModSum(x, y) (((x + y) % n + n) % n)
-    void Assign(const string &p)
+    int n, c[N], p[N], rp[N], lcp[N];
+ 
+    //p[] : suffix array
+    // lcp[]: lcp array
+
+    void Assign(const string &x)
     {
-        s = p;
-        s += char(firstCharacter - 1);
+        s = x;
+        s.push_back('$'); // Change character here due to range of charater in string
         n = s.size();
-        sa.resize(n + 1);
-        lcp.resize(n + 1);
-        pos.resize(n + 1);
-        vector<int> tmpsa(n + 1), in(n + 1),
-            tmpin(n + 1), cnt(max(n, 256) + 1, 0);
-
-        // ------ Counting Sort ------
-
-        for (auto i : s)
-            ++cnt[i - firstCharacter + 1];
-        for (int i = 1; i <= ALPHABET_SIZE; ++i)
-            cnt[i] += cnt[i - 1];
-        for (int i = n - 1; ~i; --i)
-            sa[--cnt[s[i] - firstCharacter + 1]] = i;
-
-        // Break into bucket
+        Build();
+        s.pop_back();
+        n = s.size();
+    }
+ 
+    void Build()
+    {
+        vector<int> pn(N), cn(N), cnt(N);
+ 
         for (int i = 0; i < n; ++i)
-            in[sa[i]] = i == 0 ? 0 : (in[sa[i - 1]] + (s[sa[i]] != s[sa[i - 1]]));
-        // ----- End Counting Sort ------
-
-        for (int i = 0, maxn = in [sa[n - 1]]; (1 << i) <= n; ++i)
+            ++cnt[s[i]];
+        for (int i = 1; i <= 256; ++i)
+            cnt[i] += cnt[i - 1];
+        for (int i = 0; i < n; ++i)
+            p[--cnt[s[i]]] = i;
+ 
+        for (int i = 1; i < n; ++i)
+            c[p[i]] = c[p[i - 1]] + (s[p[i]] != s[p[i - 1]]);
+ 
+        int maxn = c[p[n - 1]];
+ 
+        for (int i = 0; (1 << i) < n; ++i)
         {
-            // Reset cnt[]
+            for (int j = 0; j < n; ++j)
+                p[j] = ((p[j] - (1 << i)) % n + n) % n;
             for (int j = 0; j <= maxn; ++j)
                 cnt[j] = 0;
-
-            // ----- Counting Sort -----
+ 
             for (int j = 0; j < n; ++j)
-                ++cnt[in[sa[j]]];
+                ++cnt[c[p[j]]];
+ 
             for (int j = 1; j <= maxn; ++j)
                 cnt[j] += cnt[j - 1];
+ 
             for (int j = n - 1; ~j; --j)
-                tmpsa[--cnt[in[ModSum(sa[j], -(1 << i))]]] = ModSum(sa[j], -(1 << i));
-            // break into bucket
+                pn[--cnt[c[p[j]]]] = p[j];
+ 
+            for (int j = 1; j < n; ++j)
+                cn[pn[j]] = cn[pn[j - 1]] + (c[pn[j]] != c[pn[j - 1]] || c[(pn[j] + (1 << i)) % n] != c[(pn[j - 1] + (1 << i)) % n]);
+ 
+            maxn = cn[pn[n - 1]];
+ 
             for (int j = 0; j < n; ++j)
             {
-                sa[j] = tmpsa[j];
-                tmpin[sa[j]] = j == 0 ? 0 : (tmpin[sa[j - 1]] + (make_pair(in[sa[j]], in[ModSum(sa[j], 1 << i)]) != make_pair(in[sa[j - 1]], in[ModSum(sa[j - 1], 1 << i)])));
+                p[j] = pn[j];
+                c[j] = cn[j];
             }
-            // ----- End Counting Sort -----
-
-            maxn = tmpin[sa[n - 1]];
-            swap(in, tmpin);
         }
-        s.pop_back();
-        --n;
     }
-
-    void LCP()
+ 
+    void BuildLCP()
     {
+        for (int i = 1; i <= n; ++i)
+            rp[p[i]] = i;
         for (int i = 0; i < n; ++i)
-            pos[sa[i + 1]] = i + 1;
-        for (int i = 0, k = 0; i < n; ++i)
         {
-            if (pos[i] == n)
-            {
-                lcp[pos[i]] = k = 0;
+            if (i)
+                lcp[i] = max(lcp[i - 1] - 1, 0);
+            if (rp[i] == n)
                 continue;
-            }
-            while (k + i < n && sa[pos[i] + 1] + k < n &&
-                   s[k + i] == s[sa[pos[i] + 1] + k])
-                ++k;
-            lcp[pos[i]] = k;
-            k = max(k - 1, 0);
+ 
+            while (lcp[i] < n - i && lcp[i] < n - p[rp[i] + 1] && s[i + lcp[i]] == s[p[rp[i] + 1] + lcp[i]])
+                ++lcp[i];
         }
     }
-};
+} g;
