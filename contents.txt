@@ -26,8 +26,10 @@ countprimes.cc	Count Primes
 interpolation.cc	Interpolation (Mod a prime)
 bignum.cc	Bignum
 bignummul.cc	Bignum with FFT multiplication
-tonellishanks.cc	Tonelli Shanks (Find square root modulo)
+tonellishanks.cc	Tonelli Shanks (Find square root modulo prime)
 discretelog.cc	Discrete Logarithm (Find $x$ that $a^x \equiv b$ $(mod$ $m)$)
+primitiveroot.cc	Primitive Root (Exist $k$ that $g^k \equiv a$ $(mod$ $n)$ for all $a$)
+discreteroot.cc	Discrete Root (Find $x$ that $x^k \equiv a$ $(mod$ $n)$, $n$ is a prime)
 
 [Graph algorithms]
 twosat.cc	Twosat (2-SAT)

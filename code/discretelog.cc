@@ -3,7 +3,8 @@
 // Returns -1 if x isn't exist
 
 using ll = int;
-ll solve(ll a, ll b, ll m)
+
+ll DiscreteLogarithm(ll a, ll b, ll m)
 {
     a %= m, b %= m;
     ll k = 1, add = 0, g;
