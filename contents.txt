@@ -43,6 +43,7 @@ aho.cc	Aho Corasick - Extended KMP
 suffixtree.cc	Suffix Tree (Template by Tran Khoi Nguyen)
 
 [Data structures]
+orderedset.cc	Ordered Set
 walkonfenwick.cc	Fenwick Tree (With Walk on tree)
 cht.cc	Convex Hull Trick (Min)
 dynamiccht.cc	Dynamic Convex Hull Trick (Min)
