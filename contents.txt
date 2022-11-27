@@ -5,9 +5,13 @@
 
 [Flow and Matching]
 dinic.cc	Maximum Flow (Dinic)
+dinic-tknguyen.cc	Dinic (Template by Tran Khoi Nguyen)
+mincut-tknguyen.cc	Min Cut (Template by Tran Khoi Nguyen)
 hopcroftkarp.cc	Maximum Matching (HopCroft - Karp)
+matching-tknguyen.cc	Maximum Matching (Template by Tran Khoi Nguyen)
 maxmatch.cc	Maximum Matching (O($n^2$))
 mincostflow.cc	Min Cost Flow
+mincostflow-tknguyen.cc	Min Cost Flow (Template by Tran Khoi Nguyen)
 
 [Geometry]
 pick.txt	Pick's Theorem
@@ -22,6 +26,7 @@ crt.cc	Chinese Remain Theorem
 rho.cc	Pollard Rho - Factorialize
 fft.cc	FFT
 fftmod998.cc	FFT (Mod 998244353)
+fftmod-tknguyen.cc	FFT Mod (Template by Tran Khoi Nguyen)
 countprimes.cc	Count Primes
 interpolation.cc	Interpolation (Mod a prime)
 bignum.cc	Bignum
@@ -30,17 +35,23 @@ tonellishanks.cc	Tonelli Shanks (Find square root modulo prime)
 discretelog.cc	Discrete Logarithm (Find $x$ that $a^x \equiv b$ $(mod$ $m)$)
 primitiveroot.cc	Primitive Root (Exist $k$ that $g^k \equiv a$ $(mod$ $n)$ for all $a$)
 discreteroot.cc	Discrete Root (Find $x$ that $x^k \equiv a$ $(mod$ $n)$, $n$ is a prime)
+rrsieve.cc	Super Sieve of Primes (Code by RR)
 
 [Graph algorithms]
 twosat.cc	Twosat (2-SAT)
 eulerian.cc	Eulerian Path
 biconnected.cc	Biconnected Component Tree
+hld-tknguyen.cc	Heavy Light Decomposition (Template by Tran Khoi Nguyen)
+oddcircledsu-tknguyen.cc	Check Odd Circle With DSU (Template by Tran Khoi Nguyen)
 
 [String]
 palindrometree.cc	Palindrome Tree
 sa.cc	Suffix Array
+sa-tknguyen.cc	Suffix Array (Template by Tran Khoi Nguyen)
 aho.cc	Aho Corasick - Extended KMP
+aho-tknguyen.cc	Aho Corasick (Template by Tran Khoi Nguyen)
 suffixtree.cc	Suffix Tree (Template by Tran Khoi Nguyen)
+zfunction.cc	Z Function
 
 [Data structures]
 orderedset.cc	Ordered Set
@@ -48,3 +59,5 @@ walkonfenwick.cc	Fenwick Tree (With Walk on tree)
 cht.cc	Convex Hull Trick (Min)
 dynamiccht.cc	Dynamic Convex Hull Trick (Min)
 splaytree.cc	SPlay Tree
+hash-tknguyen.cc	Hashing (Template by Tran Khoi Nguyen)
+bit2d-tknguyen.cc	BIT 2D (Template by Tran Khoi Nguyen)
