@@ -1,7 +1,7 @@
 
 import subprocess
 code_dir = "code"
-title = "TurboDB ICPC Notebook"
+title = "Huawei ICPC Notebook"
 
 def get_sections():
     sections = []

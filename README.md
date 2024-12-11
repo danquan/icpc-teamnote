@@ -1,4 +1,4 @@
-TurboDB ICPC teamnote
+Huawei Cloud ICPC teamnote (2024)
 ========================
 The included Python scripts can generate the notebook in PDF or HTML format. Both scripts read the contents of the notebook from `contents.txt`.
 
