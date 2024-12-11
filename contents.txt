@@ -55,3 +55,7 @@ walkonfenwick.cc	Fenwick Tree (With Walk on tree)
 cht.cc	Convex Hull Trick (Min)
 dynamiccht.cc	Dynamic Convex Hull Trick (Min)
 splaytree.cc	SPlay Tree
+
+[Technical]
+vscode-setup.txt	Setup for Visual Studio Code (VSCode)
+pragma.txt	Compiler Oriented

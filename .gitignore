@@ -1,1 +1,7 @@
 venv/
+notebook.aux
+notebook.fdb_latexmk
+notebook.fls
+notebook.log
+notebook.out
+notebook.toc

@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CP C++ build task",
+            "type": "shell",
+            "command": "cd ${fileDirname} && g++ -std=c++17 -Wfatal-errors -Wall -Wmaybe-uninitialized -Wextra -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Wunreachable-code -Wmissing-include-dirs -pedantic -pedantic-errors \"${file}\" -o ${fileBasenameNoExtension} && ./${fileBasenameNoExtension}",
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
