@@ -30,6 +30,11 @@ namespace ntt
     void init()
     {
         int now = (mod - 1) / 2, len = 1, irt = Pow(rt, mod - 2, mod);
+
+        G[0] = 1;
+        iG[0] = 1;
+        itwo[0] = 1;
+        
         while (now % 2 == 0)
         {
             G[len] = Pow(rt, now, mod);
@@ -99,3 +104,4 @@ namespace ntt
             a[i] = a[i] * itwo[len] % mod;
     }
 };
+
