@@ -1,5 +1,5 @@
 \documentclass[a4paper, 10pt]{article}
-\usepackage[left=0.8cm,right=0.8cm,top=1.5cm,bottom=1.0cm]{geometry}
+\usepackage[left=0.8cm,right=0.8cm,top=1.3cm,bottom=0.5cm]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{listings}
@@ -9,20 +9,45 @@
 \usepackage{multicol}
 \usepackage[vietnamese]{babel}
 
+\setlength{\columnsep}{5pt}         % Giảm khoảng cách giữa các cột (mặc định là 10pt)
+\setlength{\columnseprule}{0.4pt}   % Độ dày của đường phân cách (0pt = không có đường)
+
 \renewcommand*{\ttdefault}{pcr}
-\renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
-\renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
+\renewcommand\cftsecfont{\fontsize{7}{8}\bfseries}
+\renewcommand\cftsecpagefont{\fontsize{7}{8}\mdseries}
 \renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
 \renewcommand\cftsubsecpagefont{\fontsize{5}{6}\mdseries}
-\renewcommand\cftsecafterpnum{\vspace{-1ex}}
-\renewcommand\cftsubsecafterpnum{\vspace{-1ex}}
+\renewcommand\cftsecafterpnum{\vspace{0.5ex}}
+\renewcommand\cftsubsecafterpnum{\vspace{0.3ex}}
+
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{6.5}{7}}
+\makeatother
+
+\usepackage{amsthm}                            % Package cho các môi trường toán học
+\theoremstyle{definition}                      % Kiểu định dạng cho theorem
+\newtheorem{theorem}{Theorem}[section]         % Định nghĩa môi trường theorem
+\newtheorem{lemma}[theorem]{Lemma}            % Định nghĩa môi trường lemma
+
+% Điều chỉnh font size cho section headers
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {0ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\normalfont\fontsize{7}{8}\bfseries}}    % Giảm từ 7/8 xuống 6/7
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\fontsize{6}{7}\bfseries}}    % Giảm từ font thường xuống 5/6
+\makeatother
 
 \lstdefinestyle{shared}{
     belowcaptionskip=1\baselineskip,
     breaklines=true,
     xleftmargin=\parindent,
     showstringspaces=false,
-    basicstyle=\fontsize{5.5}{6}\ttfamily,
+    basicstyle=\fontsize{6.5}{7}\ttfamily,
 }
 \lstdefinestyle{cpp}{
 	style=shared,
@@ -65,7 +90,7 @@
 \fancyfoot[C]{}
 }
 
-\title{\vspace{-4ex}\Large{University of Engineering and Technology - milliard Notebook (2025 - 2026)}}
+\title{\vspace{-4ex}\Large{milliard Notebook (2025 - 2026)}}
 \author{}
 \date{}
 

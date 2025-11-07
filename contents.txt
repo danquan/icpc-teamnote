@@ -14,7 +14,7 @@ mincostflow.cc	Min Cost Flow
 mincostflow-tknguyen.cc	Min Cost Flow (Template by Tran Khoi Nguyen)
 
 [Geometry]
-pick.txt	Pick's Theorem
+pick.tex	Pick's Theorem
 smallestcircle.cc	Smallest Circle - Emo Welzl (Contain all points)
 closestpoint.cc	Closest pair of points in set
 manhattanmst.cc	Manhattan MST
@@ -27,6 +27,8 @@ rho.cc	Pollard Rho - Factorialize
 fft.cc	FFT
 fftmod998.cc	FFT (Mod 998244353)
 fftmod-tknguyen.cc	FFT Mod (Template by Tran Khoi Nguyen)
+fwht.cc	Fast Walsh-Hadamard Transform (FWHT)
+fwht_basem.cc	Fast Walsh-Hadamard Transform (FWHT Base m)
 countprimes.cc	Count Primes
 interpolation.cc	Interpolation (Mod a prime)
 bignum.cc	Bignum
@@ -41,8 +43,6 @@ rrsieve.cc	Super Sieve of Primes (Code by RR)
 twosat.cc	Twosat (2-SAT)
 eulerian.cc	Eulerian Path
 biconnected.cc	Biconnected Component Tree
-hld-tknguyen.cc	Heavy Light Decomposition (Template by Tran Khoi Nguyen)
-oddcircledsu-tknguyen.cc	Check Odd Circle With DSU (Template by Tran Khoi Nguyen)
 
 [String]
 palindrometree.cc	Palindrome Tree

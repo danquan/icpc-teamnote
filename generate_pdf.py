@@ -1,7 +1,8 @@
 
 import subprocess
 code_dir = "code"
-title = "TurboDB ICPC Notebook"
+tex_dir = "tex"
+title = "milliard ICPC Notebook"
 
 def get_sections():
     sections = []
@@ -50,8 +51,12 @@ def get_tex(sections):
         tex += '\\section{%s}\n' % texify(section_name)
         for (filename, subsection_name) in subsections:
             tex += '\\subsection{%s}\n' % texify(subsection_name)
-            tex += '\\raggedbottom\\lstinputlisting[style=%s]{%s/%s}\n' % (get_style(filename), code_dir, filename)
-            tex += '\\hrulefill\n'
+            ext = filename.lower().split('.')[-1]
+            if ext == 'tex':
+                tex += '\\input{%s/%s}\n' % (tex_dir, filename)
+            else:
+                tex += '\\raggedbottom\\lstinputlisting[style=%s]{%s/%s}\n' % (get_style(filename), code_dir, filename)
+                tex += '\\hrulefill\n'
         tex += '\n'
     return tex
 
