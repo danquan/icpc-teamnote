@@ -1,4 +1,4 @@
-TurboDB ICPC teamnote
+milliard ICPC teamnote
 ========================
 The included Python scripts can generate the notebook in PDF or HTML format. Both scripts read the contents of the notebook from `contents.txt`.
 
