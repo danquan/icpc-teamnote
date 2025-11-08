@@ -9,6 +9,8 @@
 \usepackage{multicol}
 \usepackage[vietnamese]{babel}
 
+
+\setlength{\parindent}{0pt} % remove first line indentation
 \setlength{\columnsep}{5pt}         % Giảm khoảng cách giữa các cột (mặc định là 10pt)
 \setlength{\columnseprule}{0.4pt}   % Độ dày của đường phân cách (0pt = không có đường)
 
@@ -24,7 +26,10 @@
 \renewcommand\normalsize{\@setfontsize\normalsize{6.5}{7}}
 \makeatother
 
-\usepackage{amsthm}                            % Package cho các môi trường toán học
+% math packages
+\usepackage{amsmath}    % For advanced math formatting
+\usepackage{amssymb}    % For math symbols
+\usepackage{amsthm}     % Already present, for theorems
 \theoremstyle{definition}                      % Kiểu định dạng cho theorem
 \newtheorem{theorem}{Theorem}[section]         % Định nghĩa môi trường theorem
 \newtheorem{lemma}[theorem]{Lemma}            % Định nghĩa môi trường lemma

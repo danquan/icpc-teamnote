@@ -3,6 +3,14 @@
 # Subsections within a section should follow the format:
 #   [filename within code directory][tab character \t][subsection title]
 
+[Math]
+# functions.tex	Functions
+sequences.tex	Sequences
+combinatoric.tex	Combinatoric
+series.tex	Series
+geometry.tex	Geometry
+pick.tex	Pick's Theorem
+
 [Flow and Matching]
 dinic.cc	Maximum Flow (Dinic)
 dinic-tknguyen.cc	Dinic (Template by Tran Khoi Nguyen)
@@ -14,7 +22,6 @@ mincostflow.cc	Min Cost Flow
 mincostflow-tknguyen.cc	Min Cost Flow (Template by Tran Khoi Nguyen)
 
 [Geometry]
-pick.tex	Pick's Theorem
 smallestcircle.cc	Smallest Circle - Emo Welzl (Contain all points)
 closestpoint.cc	Closest pair of points in set
 manhattanmst.cc	Manhattan MST

@@ -1,0 +1,58 @@
+\subsection*{Basic Series (Maclaurin/Taylor around 0)}
+\[
+e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}\quad(\forall x),\qquad
+\ln(1+x)=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}x^n}{n}\quad(|x|<1)
+\]
+\[
+\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n\quad(|x|<1),\qquad
+\frac{1}{1+x}=\sum_{n=0}^{\infty}(-1)^n x^n\quad(|x|<1)
+\]
+\[
+(1+x)^{\alpha}=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n,\quad
+\binom{\alpha}{n}=\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}\quad(|x|<1)
+\]
+
+\subsection*{Trigonometric \& Hyperbolic}
+\[
+\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!},\quad
+\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\quad(\forall x)
+\]
+\[
+\sinh x=\sum_{n=0}^{\infty}\frac{x^{2n+1}}{(2n+1)!},\quad
+\cosh x=\sum_{n=0}^{\infty}\frac{x^{2n}}{(2n)!}\quad(\forall x)
+\]
+\textbf{Use Bernoulli to quickly remember fractional series:}
+\[
+\tan x=\sum_{m=1}^{\infty}\frac{(-1)^{m-1}2^{2m}(2^{2m}-1)B_{2m}}{(2m)!}\,x^{2m-1}\quad(|x|<\tfrac{\pi}{2})
+\]
+\[
+x\cot x=1-\sum_{m=1}^{\infty}\frac{2^{2m}B_{2m}}{(2m)!}\,x^{2m}\quad(0<|x|<\pi)
+\]
+
+\subsection*{Inverse Trigonometric \& Logarithmic}
+\[
+\arctan x=\sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{2n+1}\quad(|x|\le1,\ x\neq\pm i)
+\]
+\[
+\arcsin x=\sum_{n=0}^{\infty}\frac{\binom{2n}{n}}{4^n(2n+1)}\,x^{2n+1}\quad(|x|<1),\quad
+\arccos x=\frac{\pi}{2}-\arcsin x
+\]
+\[
+\ln(1-x)=-\sum_{n=1}^{\infty}\frac{x^n}{n}\quad(|x|<1),\qquad
+\ln\frac{1+x}{1-x}=2\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1}\quad(|x|<1)
+\]
+
+\subsection*{Generating Series \& Fast Combinatorics}
+\[
+\frac{1}{(1-x)^{\alpha}}=\sum_{n=0}^{\infty}\binom{\alpha+n-1}{n}x^n\quad(|x|<1)
+\]
+\[
+\ln\frac{1}{1-x}=\sum_{n=1}^{\infty}\frac{x^n}{n}\quad(|x|<1),\qquad
+\frac{x}{1-e^{-x}}=\sum_{n=0}^{\infty}\frac{B_n}{n!}x^n\quad(|x|<2\pi)
+\]
+
+\subsection*{Infinite Products (useful for checking/transformation)}
+\[
+\sin(\pi x)=\pi x\prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2}\right),\qquad
+\frac{\sinh(\pi x)}{\pi x}=\prod_{n=1}^{\infty}\left(1+\frac{x^2}{n^2}\right)
+\]

@@ -14,5 +14,5 @@ HTML version
 Requires: [Python 2/3](https://www.python.org/), [enscript](https://www.gnu.org/software/enscript/)
 
 Script for generating the HTML file is `generate_html.py`.
-Syntax highlighting is handled solely by enscript, and in order to change the color schemes, either the default options of enscript or `generate_html.py` should be edited accordingly.
+Syntax highlighting is handled solely by enscript, and in order to change the color schemes, either the default options of enscript or `generate_html.py` should be edited accordingly. 
 
