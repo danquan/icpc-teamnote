@@ -1,79 +1,20 @@
-using ll = long long;
-using ld = long double;
-namespace CRT
-{
-    // b must contain distinct element
-    // x % b_i = a_i
-    // x % m == (a1 * m2 * m3 * ... * m_k) * [(m2 * m3 * ... * mk) ^ -1 mod m_1] + (a2 * m1 * m3 * ... * m_k) / [(m1 * m3 * ... * mk) ^ -1 mod m2] + ...
-    // Call CRT(a, b, phi) [Default phi is empty]
-    // return {r, m} that x % m == r
+pair<ll, ll> exteuclid(ll a, ll b){
+    if(b == 0) return {1, 0};
+    pair<ll, ll> q = gcd(b, a % b);
+    return {q.second, q.first - q.second * (a / b)};
+}
 
-    // In case of overflow, use this function
-    ll Mul(ll a, ll b, const ll &mod)
-    {
-        ll q = (ld)a * b / mod;
-        ll r = a * b - q * mod;
-
-        return (r % mod + mod) % mod;
-    }
-
-    ll Pow(ll a, ll b, const ll &mod)
-    {
-        ll ans(1);
-        for (; b; b >>= 1)
-        {
-            if (b & 1)
-                ans = Mul(ans, a, mod);
-            a = Mul(a, a, mod);
-        }
-
-        return ans;
-    }
-
-    ll calPhi(ll n)
-    {
-        ll ans = 1;
-
-        for (ll i = 2; i * i <= n; ++i)
-            if (n % i == 0)
-            {
-                while (n % i == 0)
-                {
-                    n /= i;
-                    ans *= i;
-                }
-
-                ans = ans / i * (i - 1);
-            }
-
-        if (n != 1)
-            ans *= n - 1;
-
-        return ans;
-    }
-
-    pair<ll, ll> solve(const vector<ll> &a, const vector<ll> &b, vector<ll> phi = {})
-    {
-        assert(a.size() == b.size()); // Assume a and b have the same size
-        ll m = 1;
-
-        {
-            m = 1;
-            for (auto i : b)
-                m *= i;
-        }
-
-        if (phi.empty())
-        {
-            for (auto i : b)
-                phi.emplace_back(calPhi(i));
-        }
-
-        ll r = 0;
-
-        for (int i = 0; i < (int)b.size(); ++i)
-            r = (r + Mul(Mul(a[i], m / b[i], m), Pow(m / b[i], phi[i] - 1, m), m)) % m;
-
-        return make_pair(r, m);
-    }
-};
+/**
+ * x % m1 == x1
+ * x % m2 == x2
+ * => x % lcm(m1, m2) == res
+ */
+ll solve(ll x1, ll m1, ll x2, ll m2) {
+    ll g = __gcd(m1, m2);
+    if((x2 - x1) % g) return -1;// no sol
+    m1 /= g; m2 /= g;
+    pair<ll,ll> p = exteuclid(m1, m2);
+    ll lcm = m1 * m2 * g;
+    ll res = p.first * (x2 - x1) * m1 + x1;
+    return (res % lcm + lcm) % lcm;
+}

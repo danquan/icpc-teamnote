@@ -20,6 +20,7 @@ matching-tknguyen.cc	Maximum Matching (Template by Tran Khoi Nguyen)
 maxmatch.cc	Maximum Matching (O($n^2$))
 mincostflow.cc	Min Cost Flow
 mincostflow-tknguyen.cc	Min Cost Flow (Template by Tran Khoi Nguyen)
+graphmatching.cc	General Graph Matching
 
 [Geometry]
 smallestcircle.cc	Smallest Circle - Emo Welzl (Contain all points)
@@ -68,3 +69,4 @@ dynamiccht.cc	Dynamic Convex Hull Trick (Min)
 splaytree.cc	SPlay Tree
 hash-tknguyen.cc	Hashing (Template by Tran Khoi Nguyen)
 bit2d-tknguyen.cc	BIT 2D (Template by Tran Khoi Nguyen)
+wavelettree.cc	Wavelet Tree
