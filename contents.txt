@@ -7,9 +7,11 @@
 # functions.tex	Functions
 sequences.tex	Sequences
 combinatoric.tex	Combinatoric
+spanningtree.tex	Number of spanning tree
 series.tex	Series
 geometry.tex	Geometry
 pick.tex	Pick's Theorem
+erdosgallai.tex	Erdos Gallai Theorem
 
 [Flow and Matching]
 dinic.cc	Maximum Flow (Dinic)
@@ -26,6 +28,8 @@ graphmatching.cc	General Graph Matching
 smallestcircle.cc	Smallest Circle - Emo Welzl (Contain all points)
 closestpoint.cc	Closest pair of points in set
 manhattanmst.cc	Manhattan MST
+real-geometry.cc	Geometry with real number
+
 
 [Numerical algorithms]
 calc.cc	SQRT For Loop
