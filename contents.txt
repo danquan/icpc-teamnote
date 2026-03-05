@@ -13,6 +13,9 @@ geometry.tex	Geometry
 pick.tex	Pick's Theorem
 erdosgallai.tex	Erdos Gallai Theorem
 
+[Programming]
+pragma.cc	Pragma
+
 [Flow and Matching]
 dinic.cc	Maximum Flow (Dinic)
 dinic-tknguyen.cc	Dinic (Template by Tran Khoi Nguyen)
