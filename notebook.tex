@@ -8,13 +8,14 @@
 \usepackage{pdflscape}
 \usepackage{multicol}
 \usepackage[vietnamese]{babel}
+\usepackage{fontspec}
 
 
 \setlength{\parindent}{0pt} % remove first line indentation
 \setlength{\columnsep}{5pt}         % Giảm khoảng cách giữa các cột (mặc định là 10pt)
 \setlength{\columnseprule}{0.4pt}   % Độ dày của đường phân cách (0pt = không có đường)
 
-\renewcommand*{\ttdefault}{pcr}
+\setmonofont{Latin Modern Mono}[BoldFont={lmmonolt10-bold.otf}]
 \renewcommand\cftsecfont{\fontsize{7}{8}\bfseries}
 \renewcommand\cftsecpagefont{\fontsize{7}{8}\mdseries}
 \renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
@@ -95,7 +96,7 @@
 \fancyfoot[C]{}
 }
 
-\title{\vspace{-4ex}\Large{milliard Notebook (2025 - 2026)}}
+\title{\vspace{-4ex}\Large{202 Accepted Notebook (2026 - 2027)}}
 \author{}
 \date{}
 

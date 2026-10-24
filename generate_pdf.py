@@ -2,7 +2,7 @@
 import subprocess
 code_dir = "code"
 tex_dir = "tex"
-title = "milliard ICPC Notebook"
+title = "202 Accepted ICPC Notebook"
 
 def get_sections():
     sections = []

@@ -1,4 +1,4 @@
-milliard ICPC teamnote
+202 Accepted ICPC teamnote
 ========================
 The included Python scripts can generate the notebook in PDF or HTML format. Both scripts read the contents of the notebook from `contents.txt`.
 
